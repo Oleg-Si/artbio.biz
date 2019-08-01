@@ -1,0 +1,16 @@
+build/
+node_modules/
+data/
+.DS_Store
+Thumbs.db
+.idea
+*.sublime*
+*.log
+*.psd
+*.ai
+*.rar
+*.zip
+*.pdf
+yarn.lock
+npm-debug.log*
+*.ico
