@@ -17,15 +17,15 @@
   padding: 20px;
   @media ($mobile-width) {
     width: 540px;
-    padding: 10px 0;
   }
   @media ($tablet-width) {
     width: 720px;
   }
   @media ($desktop-width) {
     width: 960px;
+    padding: 10px 0;
   }
   @media ($big-desktop-width) {
-    width: 1140px;
+    width: 1535px;
   }
 }
