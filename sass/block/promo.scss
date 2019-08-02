@@ -2,7 +2,6 @@
   background-color: #ebeeef;
   height: 100vh;
   min-height: 550px;
-  margin-bottom: 5000px;
   background-image:
     url('../img/screen1_1m.png'),
     url('../img/screen1_3m.png'),
@@ -32,10 +31,40 @@
   }
 }
 @media ($mobile-width) {
-
+  .promo {
+    &__title {
+      font-size: 28px;
+      line-height: 42px;
+      max-width: 500px;
+      margin-top: 30px;
+    }
+    &__descr {
+      font-size: 18px;
+      line-height: 29px;
+      max-width: 490px;
+      margin-top: 40px;
+    }
+  }
 }
 @media ($tablet-width) {
-
+  .promo {
+    display: flex;
+    align-items: center;
+    &__title {
+      font-size: 42px;
+      line-height: 58px;
+      max-width: 700px;
+      margin-top: 0;
+    }
+    &__descr {
+      font-size: 18px;
+      line-height: 29px;
+      max-width: 490px;
+      margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 @media ($desktop-width) {
   .promo {
@@ -66,6 +95,7 @@
       max-width: 490px;
       margin-top: 40px;
       padding-left: 0;
+      margin-left: 0;
     }
   }
 }
