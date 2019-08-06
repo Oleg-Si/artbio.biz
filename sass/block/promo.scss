@@ -1,13 +1,6 @@
 .promo {
-  background-color: #ebeeef;
   height: 100vh;
   min-height: 550px;
-  background-image:
-    url('../img/screen1_1m.png'),
-    url('../img/screen1_3m.png'),
-    url('../img/screen1_4m.png');
-  background-repeat: no-repeat;
-  background-position: left top, right top, right top;
   padding-top: 60px;
   &__wrapper {
     @include container;
@@ -68,12 +61,6 @@
 }
 @media ($desktop-width) {
   .promo {
-    background-image:
-      url('../img/screen1_1t.png'),
-      url('../img/screen1_2t.png'),
-      url('../img/screen1_3t.png'),
-      url('../img/screen1_4t.png');
-    background-position: left 50px, 500px 50px, right 50px, right 50px;
     padding-top: 0;
     &__wrapper {
       display: flex;
@@ -101,12 +88,6 @@
 }
 @media ($big-desktop-width) {
   .promo {
-    background-image:
-      url('../img/screen1_1.png'),
-      url('../img/screen1_2.png'),
-      url('../img/screen1_4.png'),
-      url('../img/screen1_3.png');
-    background-position: left 100px, 750px 50px, right 150px, right 0px;
     &__title {
       font-size: 72px;
       line-height: 98px;

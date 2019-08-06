@@ -1,0 +1,76 @@
+.features {
+  min-height: 500px;
+  background-image: url('../img/screen_3m.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  &__wrapper {
+    @include container;
+  }
+  &__list {
+    @include reset-ul;
+    margin-top: 40px;
+  }
+  &__item {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    &::before {
+      content: '';
+      width: 21px;
+      height: 13px;
+      position: absolute;
+      left: 0;
+      top: 5px;
+      background-image: url(../img/icons/ok.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+  }
+}
+@media ($mobile-width) {
+
+}
+@media ($tablet-width) {
+  .features {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__wrapper {
+      margin-bottom: 300px;
+    }
+    &__item {
+      &::before {
+        top: 10px;
+      }
+    }
+  }
+}
+@media ($desktop-width) {
+  .features {
+    background: 0;
+    .products__title {
+      max-width: 500px;
+      margin-left: 0;
+    }
+    &__wrapper {
+      margin-bottom: 100px;
+    }
+    &__list {
+      margin-top: 70px;
+    }
+    &__item {
+      font-size: 20px;
+      line-height: 33px;
+    }
+  }
+}
+@media ($big-desktop-width) {
+  .features {
+
+  }
+}

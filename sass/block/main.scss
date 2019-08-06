@@ -1,0 +1,65 @@
+.main {
+  background-color: #ebeeef;
+  background-image:
+    url('../img/screen1_1m.png'),
+    url('../img/screen1_3m.png'),
+    url('../img/screen1_4m.png');
+  background-repeat: no-repeat;
+  background-position: left top, right top, right top;
+}
+@media ($mobile-width) {
+
+}
+@media ($tablet-width) {
+
+}
+@media ($desktop-width) {
+  .main {
+    background-image:
+      url('../img/screen1_1t.png'),
+      url('../img/screen1_2t.png'),
+      url('../img/screen1_3t.png'),
+      url('../img/screen1_4t.png'),
+      /* screen 2 */
+      url('../img/screen2_1t.png'),
+      url('../img/screen2_2t.png'),
+      url('../img/screen2_3t.png'),
+      url('../img/screen2_4t.png'),
+      url('../img/screen2_5t.png'),
+      url('../img/screen2_6t.png'),
+      /* screen 3 */
+      url('../img/screen_3t.png');
+
+    background-position: left 50px, 500px 50px, right 50px, right 50px,
+      /* screen 2 */
+      left 1103px, left 1357px, right 865px, 70px 856px, left 734px, right 1310px,
+      /* screen 3 */
+      right 1610px;
+  }
+}
+@media ($big-desktop-width) {
+  .main {
+    background-image:
+      url('../img/screen1_1.png'),
+      url('../img/screen1_2.png'),
+      url('../img/screen1_4.png'),
+      url('../img/screen1_3.png'),
+    /* screen 2 */
+      url('../img/screen2_2.png'),
+      url('../img/screen2_1.png'),
+      url('../img/screen2_3.png'),
+      url('../img/screen2_4.png'),
+      url('../img/screen2_5.png'),
+      url('../img/screen2_6.png'),
+    /* screen 3 */
+      url('../img/screen_3.png');
+
+
+
+    background-position: left 100px, 750px 50px, right 150px, right 0px,
+    /* screen 2 */
+      50px 1846px, left 1460px, right 746px, 169px 985px, left 987px, right 1570px,
+    /* screen 2 */
+      right 1404px;
+  }
+}

@@ -1,5 +1,4 @@
 .products {
-  background-color: #ebeeef;
   background-image: url('../img/screen2_1m.png');
   background-repeat: no-repeat;
   background-position: left center;
@@ -82,19 +81,13 @@
     height: 100vh;
     display: flex;
     align-items: center;
-    background-image:
-      url('../img/screen2_1t.png'),
-      url('../img/screen2_2t.png'),
-      url('../img/screen2_3t.png'),
-      url('../img/screen2_4t.png'),
-      url('../img/screen2_5t.png'),
-      url('../img/screen2_6t.png');
-    background-position: left bottom, left bottom, right top, left top, left top, right bottom;
+    background: none;
     &__wrapper {
       padding-top: 80px;
     }
     &__title {
       line-height: 46px;
+      text-align: left;
     }
     &__items {
       padding-top: 0;
@@ -129,20 +122,16 @@
 @media ($big-desktop-width) {
   .products {
     align-items: flex-start;
-    background-image:
-      url('../img/screen2_1.png'),
-      url('../img/screen2_2.png'),
-      url('../img/screen2_3.png'),
-      url('../img/screen2_4.png'),
-      url('../img/screen2_5.png'),
-      url('../img/screen2_6.png');
-    background-position: left 400px, left bottom, right top, left top, left top, right 500px;
     &__title {
       font-size: 48px;
       line-height: 65px;
       max-width: 850px;
       margin-left: auto;
       margin-right: auto;
+      text-align: center;
+      &--left {
+        text-align: left;
+      }
     }
     &__items {
       width: 1300px;
@@ -158,7 +147,7 @@
       width: 30%;
       display: flex;
       align-items: center;
-      margin-bottom: 50px;
+      margin-bottom: 70px;
       &_img {
         width: 100px;
         height: 100px;
