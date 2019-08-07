@@ -1,0 +1,113 @@
+.contact {
+  &__wrapper {
+    @include container;
+  }
+  &__descr {
+    font-weight: 300;
+    line-height: 28px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  form {
+    input,
+    textarea {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 33px;
+      width: 100%;
+      border: 1px solid rgba(6, 21, 31, 0.15);
+      padding: 10px;
+      padding-left: 15px;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      color: $color-text;
+      &::placeholder {
+        color: $color-text;
+      }
+    }
+    textarea {
+      height: 180px;
+      resize: none;
+    }
+    input {
+      &[type="submit"] {
+        background-color: $color-main;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #fff;
+        cursor: pointer;
+        transition-duration: 0.3s;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+@media ($mobile-width) {
+
+}
+@media ($tablet-width) {
+
+}
+@media ($desktop-width) {
+  .contact {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 30px;
+    &__descr {
+      font-size: 20px;
+      line-height: 33px;
+      width: 800px;
+      margin-left: 0;
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      input {
+        width: 470px;
+        height: 50px;
+        margin-bottom: 20px;
+        &[type="submit"] {
+          width: 330px;
+          margin-bottom: 0;
+        }
+      }
+      textarea {
+        height: 130px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+@media ($big-desktop-width) {
+  .contact {
+    height: 100vh;
+    min-height: auto;
+    .products__title {
+      margin-left: 0;
+    }
+    &__wrapper {
+      padding-left: 725px;
+      margin-top: 50px;
+    }
+    form {
+      input {
+        width: 390px;
+        &[type="submit"] {
+          width: 250px;
+        }
+      }
+      textarea {
+        height: 180px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
