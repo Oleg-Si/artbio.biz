@@ -130,6 +130,11 @@ $(document).ready(() => {
   const products = document.querySelectorAll('.products__item');
   const overlay = document.querySelector('.overlay');
 
+  const cleanOverlay = () => {
+    overlay.classList.remove('overlay--open');
+    overlay.innerHTML = '';
+  }
+
   products.forEach((el) => {
     const btn = el.querySelector('.products__content');
     btn.addEventListener('click', () => {
@@ -137,12 +142,19 @@ $(document).ready(() => {
 
       const card = el.querySelector('.products__card').cloneNode(true);
       card.classList.add('products__card--open');
+      card.querySelector('.products__card_btn-close').addEventListener('click', () => {
+        cleanOverlay();
+      })
+      card.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
       overlay.appendChild(card);
     })
   })
 
   overlay.addEventListener('click', () => {
-    overlay.classList.remove('overlay--open');
-    overlay.innerHTML = '';
+    cleanOverlay();
   });
+
+  new WOW().init();
 })
