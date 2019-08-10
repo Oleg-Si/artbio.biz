@@ -136,8 +136,7 @@ $(document).ready(() => {
   }
 
   products.forEach((el) => {
-    const btn = el.querySelector('.products__content');
-    btn.addEventListener('click', () => {
+    el.addEventListener('click', () => {
       overlay.classList.add('overlay--open');
 
       const card = el.querySelector('.products__card').cloneNode(true);
@@ -156,5 +155,5 @@ $(document).ready(() => {
     cleanOverlay();
   });
 
-  new WOW().init();
+  new WOW({mobile: false}).init();
 })
