@@ -86,12 +86,25 @@ $(document).ready(() => {
       });
       clearStatus();
     }
+    /*const wowCleanSlide = () => {
+      slides.forEach((el) => {
+        if (!el.classList.contains('active')) {
+          const animated = el.querySelectorAll('.wow');
+          animated.forEach((el) => {
+            el.classList.remove('animated');
+            el.style.animationName = 'none';
+            el.style.visibility = 'hidden';
+          })
+        }
+      })
+    }*/
 
     let status = 0;
 
     const clearStatus = () => {
       setTimeout(() => {
         status = 0;
+        //wowCleanSlide();
       }, slideSpeed)
     }
 
@@ -156,4 +169,22 @@ $(document).ready(() => {
   });
 
   new WOW({mobile: false}).init();
+
+  WOW.prototype.addBox = function(element) {
+    this.boxes.push(element);
+  };
+
+  // Init WOW.js and get instance
+  var wow = new WOW();
+  wow.init();
+
+  // Attach scrollSpy to .wow elements for detect view exit events,
+  // then reset elements and add again for animation
+  $('.wow').on('scrollSpy:exit', function() {
+    $(this).css({
+      'visibility': 'hidden',
+      'animation-name': 'none'
+    }).removeClass('animated');
+    wow.addBox(this);
+  }).scrollSpy();
 })

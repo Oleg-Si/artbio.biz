@@ -240,21 +240,21 @@
     }
     &__items {
       padding-top: 0;
-      &_wrapper {
-        justify-content: flex-start;
-      }
     }
     &__item {
-      width: 18.5%;
-      margin-right: 10px;
+      background-color: transparent;
+      width: 31%;
       padding: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
       &:last-child {
         margin-bottom: 10px;
       }
       &_img {
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
       }
       &_title {
         font-size: 16px;
@@ -360,10 +360,7 @@
       }
     }
     &__item {
-      background-color: transparent;
       width: 30%;
-      display: flex;
-      align-items: center;
       margin-bottom: 70px;
       &_img {
         width: 100px;
