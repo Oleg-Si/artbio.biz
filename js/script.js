@@ -1,7 +1,7 @@
 $(document).ready(() => {
   const menu = document.querySelector('.menu');
   const menuBtn = document.querySelector('.menu__btn');
-  const slideSpeed = 700; 
+  const slideSpeed = 700;
 
   menuBtn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -118,7 +118,7 @@ $(document).ready(() => {
     const top = $(id).offset().top;
 
     cleanSlideStatus();
-    document.getElementById(link).classList.add('active'); 
+    document.getElementById(link).classList.add('active');
 
     $('body,html').animate({scrollTop: top}, slideSpeed);
     $(this).parent().addClass('active');
