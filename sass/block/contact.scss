@@ -67,9 +67,11 @@
       margin-left: 0;
     }
     form {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      & > p {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
       input {
         width: 470px;
         height: 50px;

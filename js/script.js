@@ -45,7 +45,7 @@ $(document).ready(() => {
       const menuItems = menu.querySelectorAll('.menu__item');
       const menuItemsArr = Array.from(menuItems);
       menuItemsArr.some((el) => {
-        const link = el.getAttribute('data-link');
+        const link = el.firstChild.getAttribute('data-link');
         if (link == slideId) {
           el.classList.add('active');
         }
@@ -86,25 +86,12 @@ $(document).ready(() => {
       });
       clearStatus();
     }
-    /*const wowCleanSlide = () => {
-      slides.forEach((el) => {
-        if (!el.classList.contains('active')) {
-          const animated = el.querySelectorAll('.wow');
-          animated.forEach((el) => {
-            el.classList.remove('animated');
-            el.style.animationName = 'none';
-            el.style.visibility = 'hidden';
-          })
-        }
-      })
-    }*/
 
     let status = 0;
 
     const clearStatus = () => {
       setTimeout(() => {
         status = 0;
-        //wowCleanSlide();
       }, slideSpeed)
     }
 
@@ -127,7 +114,7 @@ $(document).ready(() => {
     $('.menu__item').removeClass('active');
 
     const id  = $(this).attr('href');
-    const link = $(this).parent().attr('data-link');
+    const link = $(this).attr('data-link');
     const top = $(id).offset().top;
 
     cleanSlideStatus();
@@ -170,21 +157,20 @@ $(document).ready(() => {
 
   new WOW({mobile: false}).init();
 
-  WOW.prototype.addBox = function(element) {
-    this.boxes.push(element);
-  };
+  if (screenWidth >= 1200) {
+    WOW.prototype.addBox = function(element) {
+      this.boxes.push(element);
+    };
 
-  // Init WOW.js and get instance
-  var wow = new WOW();
-  wow.init();
+    var wow = new WOW();
+    wow.init();
 
-  // Attach scrollSpy to .wow elements for detect view exit events,
-  // then reset elements and add again for animation
-  $('.wow').on('scrollSpy:exit', function() {
-    $(this).css({
-      'visibility': 'hidden',
-      'animation-name': 'none'
-    }).removeClass('animated');
-    wow.addBox(this);
-  }).scrollSpy();
+    $('.wow').on('scrollSpy:exit', function() {
+      $(this).css({
+        'visibility': 'hidden',
+        'animation-name': 'none'
+      }).removeClass('animated');
+      wow.addBox(this);
+    }).scrollSpy();
+  }
 })

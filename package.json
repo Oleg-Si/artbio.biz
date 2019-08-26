@@ -39,6 +39,11 @@
     "sass/**/*.{sass,scss}",
     "*.css"
   ],
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "IE 10"
+  ],
   "engines": {
     "node": "10.15.1"
   }

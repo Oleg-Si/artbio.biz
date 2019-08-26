@@ -159,9 +159,7 @@ gulp.task('style:dev', function(done) {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(postcss([
-    autoprefixer({browsers: [
-      'last 2 versions'
-    ]}),
+    autoprefixer(),
     mqpacker({
       sort: true
     })
@@ -184,9 +182,7 @@ gulp.task('style:build', function(done) {
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
-    autoprefixer({browsers: [
-      'last 2 versions'
-    ]}),
+    autoprefixer(),
     mqpacker({
       sort: true
     })

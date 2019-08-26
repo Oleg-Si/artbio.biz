@@ -254,6 +254,8 @@
       &_img {
         width: 80px;
         height: 80px;
+        min-width: 80px;
+        min-height: 80px;
         margin-right: 20px;
       }
       &_title {
@@ -264,6 +266,33 @@
       &_descr {
         font-size: 14px;
         margin-top: 10px;
+      }
+      &--1 {
+        order: 1;
+      }
+      &--2 {
+        order: 2;
+      }
+      &--3 {
+        order: 3;
+      }
+      &--4 {
+        order: 4;
+      }
+      &--5 {
+        order: 5;
+      }
+      &--6 {
+        order: 6;
+      }
+      &--7 {
+        order: 7;
+      }
+      &--8 {
+        order: 8;
+      }
+      &--9 {
+        order: 9;
       }
     }
     &__card {
@@ -365,6 +394,8 @@
       &_img {
         width: 100px;
         height: 100px;
+        min-width: 100px;
+        min-height: 100px;
         margin-right: 20px;
       }
       &_title {
@@ -375,33 +406,6 @@
       }
       &:last-child {
         margin-bottom: 70px;
-      }
-      &--1 {
-        order: 1;
-      }
-      &--2 {
-        order: 2;
-      }
-      &--3 {
-        order: 3;
-      }
-      &--4 {
-        order: 4;
-      }
-      &--5 {
-        order: 5;
-      }
-      &--6 {
-        order: 6;
-      }
-      &--7 {
-        order: 7;
-      }
-      &--8 {
-        order: 8;
-      }
-      &--9 {
-        order: 9;
       }
     }
     &__card {
