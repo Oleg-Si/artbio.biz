@@ -147,6 +147,13 @@ $(document).ready(() => {
       card.addEventListener('click', (e) => {
         e.stopPropagation();
       });
+
+      card.querySelector('.products__card_btn--transparent').addEventListener('click', (e) => {
+        e.preventDefault();
+        overlay.innerHTML = '';
+        $('.form').addClass('form--open');
+      });
+
       overlay.appendChild(card);
     })
   })
@@ -173,4 +180,5 @@ $(document).ready(() => {
       wow.addBox(this);
     }).scrollSpy();
   }
+
 })
